@@ -16,7 +16,7 @@ public class TestAppApplication {
 	
 	@GetMapping("/hello")
 	public String getMessage() {
-		return "hello";
+		return "hello message";
 	}
 
 }
