@@ -13,7 +13,7 @@ pipeline {
     stage('git checkout') {
     	steps {
             //	git credentialsId: 'git_hub_certs', url: 'https://github.com/mnaidu10/spring-boot-test'
-            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'git_hub_certs', url: 'https://github.com/mnaidu10/spring-boot-test']]])
+            checkout([$class: 'GitSCM', branches: [[name: '*/$BRANCH_NAME']], extensions: [], userRemoteConfigs: [[credentialsId: 'git_hub_certs', url: 'https://github.com/mnaidu10/spring-boot-test']]])
     	}
     }
     stage('build') {
