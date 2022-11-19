@@ -25,8 +25,8 @@ pipeline {
         steps {
             script {
                 //dockerImage = docker.build registry
-               // bat 'docker build -t spring-boot-test .'
-                bat 'docker build -t spring-boot-test.jar .'
+                bat 'docker build -t spring-boot-test .'
+               // bat 'docker build -t spring-boot-test.jar .'
             }
         }
     }
@@ -35,7 +35,7 @@ pipeline {
             script {
                     bat 'docker login -u maradanam -p Dec123!@#'
                     bat 'docker push maradanam/spring-boot-test'
-                    bat 'docker run -p 9090:8080 spring-boot-test.jar'
+                   // bat 'docker run -p 9090:8080 spring-boot-test.jar'
             }
         }
     }
